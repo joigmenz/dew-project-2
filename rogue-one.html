@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/cinema.app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Cines Unidos</title>
+</head>
+<body>   
+    <div class="container">   
+        <div class="main-poster">
+            <img src="./assets/cinema/movie-rogue-one.jpg" alt="Rogue One">
+        </div>     
+        <form class="cinema" id="ticket-office" action="#" method="post"> 
+            <div class="stage-seat">
+               
+            </div> 
+            <div class="cart">
+                <h1>CINEMA</h1>
+                <h5>* * * MOVIE * * *</h5>
+                <table id="cart-tickets">
+                    <thead>
+                        <tr>
+                            <th>ROW</th>
+                            <th>SEAT</th>
+                            <th>PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>    
+                            <th></th>
+                            <th></th>                        
+                            <th id="total-cart"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <button class="btn btn-purchase" type="submit" id="purchaseSeat">BUY TICKETS</button>
+                <button class="btn btn-change" type="button" id="changeSeat">CHANGE SEAT</button>               
+            </div>                  
+        </form>  
+    </div>
+    <script> 
+        // Class Ticket Office
+        const form = new TicketOffice();
+        let letter,
+            columns;
+        while(true) {
+            // User enter a letter of the alphabet 
+            letter = prompt('Enter a letter of the alphabet: ')
+            // User enter a number of seats, maximun 5
+            columns = prompt('Enter a number of seats. (max 5)')  
+            // Validate letter and number with the method static of the class Theater          
+            if(Theater.isCharacterALetter(letter) && letter.length == 1 && Theater.isCharacterANumber(columns)){
+                break
+            }   
+            alert(`${letter} or ${columns} not is valid!`)  
+        }
+        let stageSeat = form.form.children[0];
+        Theater.build(stageSeat, letter.toUpperCase(), columns);
+        form.addCart();
+    </script>
+</body>
+</html>

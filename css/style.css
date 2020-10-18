@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+html {
+  font-family: 'Patrick Hand', cursive;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .poster {
+  padding-top: 1.75em;
+}
+
+.container .poster img {
+  width: 567px;
+}
+
+.container .main-poster {
+  position: relative;
+  padding-top: 1.75em;
+  width: 600px;
+}
+
+.container .main-poster img {
+  border-radius: 10px;
+  height: 275px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .main-poster img:hover {
+  opacity: .8;
+}
+
+.container .main-poster a {
+  color: black;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  text-decoration: none;
+}
+
+.container .main-poster a:link:active, .container .main-poster a:visited:active {
+  color: inherit;
+}
+
+.container .main-poster .btn-purchase {
+  padding: .325em .725em;
+  background-color: #f7c953;
+  border-radius: 10px;
+}
+
+.container .main-poster .btn-purchase:hover {
+  background-color: #b8994c;
+}
+
+.cinema {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  padding: 0 1.25em 0 1.25em;
+}
+
+.stage-seat {
+  background: #f4f0f0;
+  border-start-start-radius: .75em;
+  border-end-start-radius: .75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse nowrap;
+          flex-flow: column-reverse nowrap;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  padding: 1em 1.75em;
+}
+
+.stage-seat .row-seats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  padding-bottom: 8px;
+}
+
+.seat {
+  font-size: .80em;
+  height: 58px;
+  width: 58px;
+}
+
+.seat input[type=checkbox] {
+  display: none;
+}
+
+.seat input[type=checkbox]:hover + label * {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.seat input[type=checkbox]:checked + label * {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: grayscale(45%);
+          filter: grayscale(45%);
+}
+
+.seat input[type=checkbox]:disabled + label * {
+  -webkit-transform: inherit;
+          transform: inherit;
+  opacity: .35;
+}
+
+.seat label {
+  color: #135370;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.seat label span {
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 100;
+}
+
+.selected {
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+}
+
+.selected img {
+  -webkit-filter: grayscale(45%);
+          filter: grayscale(45%);
+}
+
+.disabled:hover {
+  -webkit-transform: inherit;
+          transform: inherit;
+}
+
+.disabled * {
+  opacity: .35;
+}
+
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  background: #e8e4d8;
+  padding: 1.725em 1.325em;
+  min-height: 95px;
+  border-start-end-radius: .75em;
+  border-end-end-radius: .75em;
+}
+
+.cart h1, .cart h5 {
+  font-family: 'Limelight', cursive;
+  line-height: .175rem;
+  margin: .725rem 0;
+  text-align: center;
+}
+
+.cart table {
+  padding-bottom: .725em;
+}
+
+.cart table th {
+  width: 55px;
+}
+
+.cart table td {
+  text-align: center;
+}
+
+.cart .btn-purchase {
+  background: #feb338;
+}
+
+.cart .btn-purchase:hover {
+  background: #bf9043;
+}
+
+.cart .btn-change {
+  margin-top: .775em;
+  background: #1c8565;
+}
+
+.cart .btn-change:hover {
+  background: #18614b;
+}
+
+.btn {
+  border: 3px dotted #e8e4d8;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: .375em;
+}
+/*# sourceMappingURL=style.css.map */
